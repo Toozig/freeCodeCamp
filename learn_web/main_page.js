@@ -229,12 +229,13 @@ function parseComicIssues(htmlDoc){
      */
     const oTable = htmlDoc.getElementsByClassName('listing')[0];
     const rows = [...oTable.rows].slice(2);
+    console.log(rows)
     let issuesArr = {};
     for (let i = 0; i < rows.length; i++) {
         let curArr = {};
         let rowData = rows[i].getElementsByTagName('a')[0];
         curArr['title'] = rowData.title;
-        curArr['href'] =  'view_page.html'  //rowData.href;
+        curArr['href'] =  'view_page.html?link=/' + rowData.href;
         curArr['releaseDate'] = rows[i].cells[1].textContent.trim()
         issuesArr[i] = curArr;
     }
@@ -243,7 +244,10 @@ function parseComicIssues(htmlDoc){
 }
 
 
-
+function prepareQueryParms(href){
+    const = href.split('/').slice(-2);
+    parms = 'name=' + co
+}
 
 
 function parseComicInfoHelper(p, infoDict){
