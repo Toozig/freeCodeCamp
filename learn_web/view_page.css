@@ -1,3 +1,6 @@
+
+
+/* tool bar css */
 /* Style the header */
 .header {
     padding: 10px 16px;
@@ -20,4 +23,12 @@
   /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
     padding-top: 102px;
+  }
+
+  /* content */
+  .comic_viewer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
