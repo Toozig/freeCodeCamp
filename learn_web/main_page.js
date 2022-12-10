@@ -234,7 +234,7 @@ function parseComicIssues(htmlDoc){
         let curArr = {};
         let rowData = rows[i].getElementsByTagName('a')[0];
         curArr['title'] = rowData.title;
-        curArr['href'] =  '/view_page.html'  //rowData.href;
+        curArr['href'] =  'view_page.html'  //rowData.href;
         curArr['releaseDate'] = rows[i].cells[1].textContent.trim()
         issuesArr[i] = curArr;
     }

@@ -22,8 +22,6 @@ img {
 }
 
 
-
-
 /* Classes  */
 .column {
 	display:flex;
@@ -38,7 +36,6 @@ img {
 	display: flex;
 	justify-content: space-between;
 	margin: 2rem 0;
-	
 }
 
 .image-row {
