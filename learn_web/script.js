@@ -94,7 +94,7 @@ function createComicSummary(comicInfo){
     keyElement.className = 'key-info';
     keyElement.textContent = 'Summary:';
     let valueElement = document.createElement('p');
-    valueElement.classList.add('value-info','comicInfo');
+    valueElement.classList.add('value-info','comic-info');
     valueElement.textContent = comicInfo['summary'];
     element.appendChild(keyElement);
     return [element, valueElement];
@@ -234,7 +234,7 @@ function parseComicIssues(htmlDoc){
         let curArr = {};
         let rowData = rows[i].getElementsByTagName('a')[0];
         curArr['title'] = rowData.title;
-        curArr['href'] = rowData.href;
+        curArr['href'] =  '/view_page.html'  //rowData.href;
         curArr['releaseDate'] = rows[i].cells[1].textContent.trim()
         issuesArr[i] = curArr;
     }
